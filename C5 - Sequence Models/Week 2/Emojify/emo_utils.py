@@ -6,11 +6,11 @@ import matplotlib.pyplot as plt
 from sklearn.metrics import confusion_matrix
 
 def read_glove_vecs(glove_file):
-    with open(glove_file, 'r') as f:
+    with open(glove_file, 'rb') as f:
         words = set()
         word_to_vec_map = {}
         for line in f:
-            line = line.strip().split()
+            line = line.decode('utf-8').strip().split()
             curr_word = line[0]
             words.add(curr_word)
             word_to_vec_map[curr_word] = np.array(line[1:], dtype=np.float64)

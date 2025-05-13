@@ -113,7 +113,7 @@ def on_epoch_end(epoch, logs):
         
     # Stop at the end of a line (4 lines)
     print()
- """   
+"""
 print("Loading text data...")
 text = io.open('shakespeare.txt', encoding='utf-8').read().lower()
 #print('corpus length:', len(text))
